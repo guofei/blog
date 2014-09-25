@@ -6,27 +6,45 @@ comments: true
 categories: database
 ---
 ### PostgreSQL
+create user
+{% highlight bash %}
+CREATE USER davide WITH PASSWORD 'jw8s0F4';
+{% endhighlight %}
+
+create database
+{% highlight bash %}
+CREATE DATABASE dbname;
+CREATE DATABASE dbname OWNER username TABLESPACE spacename;
+CREATE DATABASE dbname ENCODING 'LATIN1' TEMPLATE template0;
+{% endhighlight %}
+
 login
 {% highlight bash %}
+
 psql "dbname=databasename host=host user=user password=pwd port=5432 sslmode=require"
 {% endhighlight %}
+
 create table
 {% highlight bash %}
 create table testtbl(num int, name varchar(50));
 {% endhighlight %}
+
 show
 {% highlight bash %}
 \d;
 \d testtbl;
 {% endhighlight %}
+
 各テーブルのレコード数:
 {% highlight bash %}
 SELECT COUNT(*) FROM テーブル名;
 {% endhighlight %}
+
 すべてのレコード数
 {% highlight bash %}
 SELECT T2.relname , T2.reltuples FROM pg_stat_user_tables AS T1 INNER JOIN pg_class AS T2 ON T1.relname = T2.relname ORDER BY T2.relname;
 {% endhighlight %}
+
 others
 {% highlight bash %}
 insert into testtbl values(1,'kaku');
@@ -35,6 +53,7 @@ update testtbl set name='kaku' where num=1;
 delete from testtbl where num=1;
 drop table testtbl;
 {% endhighlight %}
+
 ログアウト
 {% highlight bash %}
 \q
