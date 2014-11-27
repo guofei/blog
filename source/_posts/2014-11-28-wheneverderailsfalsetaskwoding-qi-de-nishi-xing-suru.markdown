@@ -7,7 +7,7 @@ categories: [rails, gem]
 ---
 
 Wheneverをインストール
-{% highlight sh %}
+{% highlight ruby %}
 # Gemfile
 gem 'whenever', :require => false
 {% endhighlight %}
