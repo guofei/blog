@@ -6,12 +6,14 @@ comments: true
 categories: [ruby,design pattern,读书笔记]
 ---
 ### Template Method
+
 {% highlight ruby %}
 class Report
   def initialize
     @title = 'Monthly Report'
     @text =  ['Things are going', 'really, really well.']
   end
+
   def output_report
     output_start
     output_head
@@ -22,26 +24,34 @@ class Report
     output_body_end
     output_end
   end
+
   def output_start
   end
+
   def output_head
     output_line(@title)
   end
+
   def output_body_start
   end
+
   def output_line(line)
     raise 'Called abstract method: output_line'
   end
+
   def output_body_end
   end
+
   def output_end
   end
 end
+
 class PlainTextReport < Report
   def output_line(line)
     puts(line)
   end
 end
+
 class HTMLReport < Report
   def output_start
     puts('<html>')
