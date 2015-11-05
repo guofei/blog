@@ -3,7 +3,7 @@ layout: post
 title: "Design Patterns In Ruby"
 date: 2012-12-03 19:11
 comments: true
-categories: [ruby,design pattern,读书笔记]
+categories: [ruby,design pattern,book]
 ---
 ### Template Method
 

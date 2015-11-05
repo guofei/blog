@@ -3,7 +3,7 @@ layout: post
 title: "objective-c 内存管理的基本原则"
 date: 2012-05-14 00:46
 comments: true
-categories: [objective-c, 内存]
+categories: [objective-c]
 ---
 ## 基本的原则
 * 「alloc」、「new」、「copy」、「mutableCopy」开头的method要release

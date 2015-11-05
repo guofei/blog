@@ -3,7 +3,7 @@ layout: post
 title: "Metaprogramming Ruby"
 date: 2012-12-09 01:17
 comments: true
-categories: [ruby,读书笔记]
+categories: [ruby,book]
 ---
 ## 第一章，object model
 ### class与module

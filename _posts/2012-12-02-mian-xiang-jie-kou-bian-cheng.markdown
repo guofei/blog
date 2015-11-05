@@ -3,7 +3,7 @@ layout: post
 title: "面向接口编程"
 date: 2012-12-02 01:38
 comments: true
-categories: [程序]
+categories: programing
 ---
 之前一直理解面向接口的编程就是类似java那种interface的形式就是面向接口了，虽然说也不算错，但是理解的还是有一些偏差的。
 

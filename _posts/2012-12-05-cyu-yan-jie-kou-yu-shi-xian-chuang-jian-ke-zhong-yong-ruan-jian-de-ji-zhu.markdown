@@ -3,7 +3,7 @@ layout: post
 title: "C语言接口与实现 创建可重用软件的技术"
 date: 2012-12-05 16:37
 comments: true
-categories: [读书笔记,c]
+categories: [book,c]
 ---
 ### 抽象数据类型
 隐藏相关的细节

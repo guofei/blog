@@ -3,7 +3,7 @@ layout: post
 title: "ios addressbook frameword使用方法"
 date: 2012-05-05 18:41
 comments: true
-categories: [objective,ios,addressbook]
+categories: [objective-c,ios,addressbook]
 ---
 基本上是苹果的这篇文章的翻译
 [address book framework](https://developer.apple.com/library/ios/#documentation/ContactData/Conceptual/AddressBookProgrammingGuideforiPhone/Chapters/BasicObjects.html#//apple_ref/doc/uid/TP40007744-CH3-SW1)
