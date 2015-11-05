@@ -6,7 +6,8 @@ comments: true
 categories: [ruby,design pattern,读书笔记]
 ---
 ### Template Method
-```rb
+
+{% highlight ruby %}
 class Report
   def initialize
     @title = 'Monthly Report'
@@ -55,33 +56,28 @@ class HTMLReport < Report
   def output_start
     puts('<html>')
   end
-
   def output_head
     puts('  <head>')
     puts("    <title>#{@title}</title>")
     puts('  </head>')
   end
-
   def output_body_start
     puts('<body>')
   end
-
   def output_line(line)
     puts("  <p>#{line}</p>")
   end
-
   def output_body_end
     puts('</body>')
   end
-
   def output_end
     puts('</html>')
   end
 end
-```
+{% endhighlight %}
 
 ### Strategy
-```rb
+{% highlight ruby %}
 # 1
 class Report
   attr_reader :title, :text
@@ -160,10 +156,10 @@ PLAIN_FORMATTER = lambda do |context|
     puts(line)
   end
 end
-```
+{% endhighlight %}
 
 ### Observer
-```rb
+{% highlight ruby %}
 class Payroll
   def update( changed_employee )
     puts "Cut a new check for #{changed_employee.name}!"
@@ -266,10 +262,10 @@ ticker = Ticker.new("MSFT")
 WarnLow.new(ticker, 80)
 WarnHigh.new(ticker, 120)
 ticker.run
-```
+{% endhighlight %}
 
 ### Composite
-```rb
+{% highlight ruby %}
 class Task
   attr_accessor :name
   def initialize(name)
@@ -345,12 +341,12 @@ end
 task = MakeBatterTask.new
 puts task.name
 puts task.get_time_required
-```
+{% endhighlight %}
 
 ### Iterator
 
 ### Command
-```rb
+{% highlight ruby %}
 require "fileutils"
 
 class Command
@@ -457,10 +453,10 @@ cmds.add_command(DeleteFile.new("file1.txt"))
 
 cmds.execute
 cmds.unexecute
-```
+{% endhighlight %}
 
 ### Adapter
-```rb
+{% highlight ruby %}
 class LegacyTextObject
   def print
     show_message
@@ -473,10 +469,10 @@ class << lto
     show_message
   end
 end
-```
+{% endhighlight %}
 
 ### Proxy
-```rb
+{% highlight ruby %}
 class BankAccount
   attr_reader :balance
   def initialize(balance)
@@ -565,10 +561,10 @@ class BankAccountProxy
     end
   end
 end
-```
+{% endhighlight %}
 
 ### Decorator
-```rb
+{% highlight ruby %}
 class SimpleWriter
   def initialize(path)
     @file = File.open(path, "w")
@@ -665,11 +661,11 @@ f.extend(NumberingWriter)
 f.extend(TimestampingWriter)
 f.write_line("Hello world3.")
 f.close
-```
+{% endhighlight %}
 
 ### Singleton
 ### Factory Method
-```rb
+{% highlight ruby %}
 class Duck
   def initialize(name)
     @name = name
@@ -715,10 +711,10 @@ class FrogPond < Pond
     Frog.new(name)
   end
 end
-```
+{% endhighlight %}
 
 ### Abstract Factory
-```rb
+{% highlight ruby %}
 class Algae
   def initialize(name)
     @name = name
@@ -803,7 +799,7 @@ class Pond
 end
 
 Pond.new(3, Duck, 2, Algae).simulate_one_day
-```
+{% endhighlight %}
 
 ### Builder
 ### Interpreter
